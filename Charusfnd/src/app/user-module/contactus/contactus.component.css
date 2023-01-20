@@ -1,0 +1,23 @@
+.container-fluid{
+    color: #355c7d;
+}
+#sign{
+    width: 10%;
+    height: auto;
+    transform: rotate(20deg);
+    margin-bottom: 9vh;
+}
+#parallex1{
+    width: 100%;
+    height: 100vh;
+    background-image: url(src/assets/images/porfolioimg1.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+#hdtext{
+    padding:8px 24px ;
+    font-family: 'Dancing Script', cursive;
+}
+#mdcontainer{
+    background: #fff0e6;
+}

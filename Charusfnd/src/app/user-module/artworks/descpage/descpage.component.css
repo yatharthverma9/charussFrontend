@@ -1,0 +1,16 @@
+*{
+    font-weight: 400;
+}
+h1{
+    font-family: 'Dancing Script', cursive;
+}
+
+#dtxt{
+    font-family: 'Dancing Script', cursive;
+}
+.container{
+    border-radius: 10px;
+    /*background:  #a8e6cf;*/
+    background:  #F67280;
+    color: aliceblue;
+}

@@ -1,0 +1,86 @@
+
+
+
+
+<div   class="container text-center " >
+  <div class="" *ngIf="check;else elseBlock">
+    
+    <div  id="hedtxt" class="h1 p-2 mt-2 ">Some Of My Art's </div>
+    <div>
+    
+      <div *ngIf="loginStatus"  >
+        <!-- Button trigger modal -->
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+          <span class="material-symbols-outlined">
+            add
+            </span>
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Add Form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form  [formGroup]="saveData" (ngSubmit)="onsubmif(saveData)" >
+                  <div class="form-group">
+                    <label    for="exampleFormControlInput1">Title</label>
+                    <input type="text"  name="title" formControlName="title"  class="form-control" id="exampleFormControlInput1" placeholder="Title here">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput2">Image</label>
+                    <input type="file"  name="img"  (change)="onChange($event)"  class="form-control" id="exampleFormControlInput2" placeholder="Image">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Description</label>
+                    <textarea class="form-control" formControlName="description" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Category</label>
+                    <input type="text" name="category" formControlName="category" class="form-control" id="exampleFormControlInput1" placeholder="Title here">
+                  </div>
+                  <div class="form-group">
+                    <label  for="exampleFormControlSelect1">Availability</label>
+                    <select  name="status" formControlName="status" class="form-control" id="exampleFormControlSelect1">
+                      <option>true</option>
+                      <option> false</option>
+                    </select>
+                  </div>
+                  <button type="submit"   class="card">Submit</button>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div  class="card border-0 d-inline-block m-2 text-center "  style="width: 18rem;"   *ngFor="let data of user">
+      <a [routerLink]="['spart',data.id]" (click)="navigetto()" class="">
+        <img  src="{{data.imgUrl}}" class="card-img-top" alt="...">
+      </a> 
+        <!--<div class="card-body">
+          <h5 class="card-title">{{data.title}}</h5>
+          <p class="card-text">{{data.category}}</p>
+          Go somewhere</a> 
+        </div>-->
+      </div>
+</div>
+
+<ng-template   class="m-2 p-5"  #elseBlock>
+  <div class="" data-aos="zoom-in-up" id="m"><a (click)="navigetto()"><img class="m-2" src="assets/icones/close.png" alt="err"> </a></div>
+  <router-outlet  ></router-outlet>
+ <!-- <app-descpage ></app-descpage> (checks)="checks($event)"-->
+</ng-template >
+</div>
+
+<script>
+  AOS.init();
+</script>

@@ -1,0 +1,22 @@
+<div *ngIf="status==false;else elseblock">
+<form [formGroup]="loginForm" (ngSubmit)="loginfn()">
+  <div class="form-group">
+    <label for="exampleInputEmail1">HII CHARU</label>
+    <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted"></small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="d-flex justify-content-center m-4">
+  <button type="submit" class="card">Submit</button>
+</div>
+</form>
+</div>
+<ng-template #elseblock >
+  <router-outlet></router-outlet>
+</ng-template>
+
+
+ 

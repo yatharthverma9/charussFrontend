@@ -1,0 +1,148 @@
+.maincdiv{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.endbutton{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    top: 50px;
+
+}
+button{
+    margin-bottom: 60px;
+    border: none;
+    border-radius: 10px;
+    font-style: none;
+    background: #4a4542;
+    padding: 10px;
+    color: #fff0e6;
+}
+
+button:hover{
+    box-shadow: 5px 5px grey;
+    transition: 0.5s;
+    color: #d98a55;
+    background: rgb(255, 255, 255) ;
+}
+
+.col-lg{
+    background: #fff0e6;
+}
+.htext{
+    font-family: 'Dancing Script', cursive;
+    font-size: 8vh;
+}
+.p-5{
+    word-spacing:4px ;
+    margin: 40px;
+}
+.container{
+    background:#fff0e6;
+}
+
+.desc{
+    margin-top: 50vh;
+    background: white;
+    height: 200px;
+    width: 400px;
+
+}
+.imgdp{
+    margin: 60px 0;
+    position: relative;
+    max-width: 30pc;
+    left: 200px;
+}
+.imgtmp{
+    font-family: 'Josefin Slab', serif;
+    
+    background:white;
+    position: relative;
+    margin-left: 200px ;
+    margin-right: 5pc;
+    height: 40vh;
+    left: -2pc;
+    bottom: -16vh;
+}
+.tmhdtxt{
+    color: #b74c05;
+    font-size: xx-large;
+    
+}
+.tmintxt{
+    word-spacing: 2px;
+}
+
+
+/*/*8*/
+  .limgdp{
+    margin: 60px 0;
+    position: relative;
+    max-width: 30pc;
+    left: 676px;
+}
+.limgtmp{
+    font-family: 'Josefin Slab', serif;
+    
+    background:white;
+    position: relative;
+    margin-left: 200px ;
+    margin-right: 5pc;
+    height: 40vh;
+    left: -33pc;
+    bottom: -16vh;
+}
+.ltmhdtxt{
+    color: #b74c05;
+    font-size: xx-large;
+    
+}
+.ltmintxt{
+    word-spacing: 2px;
+}
+    
+@media (max-width:1000px)
+{
+    .lm{
+        display: block;
+
+    }
+    .limgdp{
+        max-width: fit-content;
+        position: static;
+    
+    }
+    .limgtmp{
+        max-width: fit-content;
+        background:white;
+        position: static;
+        margin: 0%;
+        padding: auto;
+       
+        
+    }
+    .imgdp{
+        max-width: fit-content;
+        position: static;
+
+    }
+    .imgtmp{
+        max-width: fit-content;
+        background:white;
+        position: static;
+        margin: 0%;
+        padding: auto;
+
+    }
+    .maincdiv{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+    
+    }
+}
+  
